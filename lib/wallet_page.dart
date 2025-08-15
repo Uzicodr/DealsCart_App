@@ -16,7 +16,7 @@ class _WalletPageState extends State<WalletPage> {
       body: Column(
         children: [
           Card(
-            color: Colors.blue,
+            color: Color(0xff6366f1),
             margin: const EdgeInsets.all(16),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
@@ -81,7 +81,7 @@ class _WalletPageState extends State<WalletPage> {
                           style: TextStyle(
                             fontFamily: 'Poppins',
                             fontSize: 16,
-                            color: Colors.blue,
+                            color: Color(0xff6366f1),
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -94,7 +94,7 @@ class _WalletPageState extends State<WalletPage> {
           ),
 
           const SizedBox(height: 50),
-          Icon(FontAwesomeIcons.magnifyingGlass, color: Colors.blue, size: 30),
+          Icon(FontAwesomeIcons.magnifyingGlass, color: Color(0xff6366f1), size: 30),
           const SizedBox(height: 30),
           Padding(
             padding: const EdgeInsets.all(8.0),

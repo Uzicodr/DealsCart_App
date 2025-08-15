@@ -45,64 +45,84 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          AnimatedBuilder(
-            animation: _animation,
-            builder: (context, child) {
-              return Transform.translate(
-                offset: Offset(_animation.value, 0),
-                child: Image.asset(
-                  'assets/SplashScreen_bg.png',
-                  fit: BoxFit.cover,
-                ),
-              );
-            },
-          ),
+  @override
+Widget build(BuildContext context) {
+  final screenHeight = MediaQuery.of(context).size.height;
 
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const SizedBox(height: 350),
-              const Image(
-                image: AssetImage('assets/logo.png'),
-                width: 120,
-                height: 120,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 60),
-                child: Column(
-                  children: const [
-                    Text(
-                      'Pakistan ki sabse sasti shopping application',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 28,
-                        fontFamily: 'Poppins-Medium',
-                        fontWeight: FontWeight.w800,
-                        color: Color.fromARGB(255, 97, 52, 234),
-                      ),
-                    ),
-                    SizedBox(height: 30),
-                    Text(
-                      'Made with ❤️ in Pakistan',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontFamily: 'Poppins-Regular',
-                        fontSize: 14,
-                        color: Color.fromARGB(255, 97, 52, 234),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+  return Scaffold(
+    body: Stack(
+      fit: StackFit.expand,
+      children: [
+        Align(
+          alignment: Alignment.topCenter,
+          child: SizedBox(
+            height: screenHeight * 0.7,
+            child: AnimatedBuilder(
+              animation: _animation,
+              builder: (context, child) {
+                return Transform.translate(
+                  offset: Offset(_animation.value, 0),
+                  child: Image.asset(
+                    'assets/grouped_pngs.png',
+                    fit: BoxFit.cover,
+                    width: double.infinity,
+                  ),
+                );
+              },
+            ),
           ),
-        ],
-      ),
-    );
-  }
+        ),
+
+        Positioned.fill(
+          child: IgnorePointer(
+            child: Image.asset(
+              'assets/overlay.png',
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const SizedBox(height: 350),
+            const Image(
+              image: AssetImage('assets/logo.png'),
+              width: 120,
+              height: 120,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 60),
+              child: Column(
+                children: const [
+                  Text(
+                    'Pakistan ki sabse sasti shopping application',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontFamily: 'Poppins-Medium',
+                      fontWeight: FontWeight.w800,
+                      color: Color(0xff6366f1),
+                    ),
+                  ),
+                  SizedBox(height: 30),
+                  Text(
+                    'Made with ❤️ in Pakistan',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'Poppins-Regular',
+                      fontSize: 14,
+                      color: Color(0xff6366f1),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
+}
+
 }

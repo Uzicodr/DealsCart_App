@@ -17,7 +17,7 @@ class _RewardsPageState extends State<RewardsPage> {
       body: Column(
         children: [
           Container(
-            color: const Color.fromARGB(255, 97, 52, 234),
+            color: const Color(0xff6366f1),
             child: Column(
               children: [
                 Padding(
@@ -49,7 +49,7 @@ class _RewardsPageState extends State<RewardsPage> {
                   width: double.infinity,
                   margin: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 97, 52, 234),
+                    color: const Color(0xff6366f1),
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(color: Colors.white, width: 2),
                   ),
@@ -93,7 +93,7 @@ class _RewardsPageState extends State<RewardsPage> {
                       Container(
                         padding: const EdgeInsets.all(4),
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 97, 52, 234),
+                          color: const Color(0xff6366f1),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Row(
@@ -116,12 +116,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: selectedIndex == 0
-                                          ? const Color.fromARGB(
-                                              255,
-                                              97,
-                                              52,
-                                              234,
-                                            )
+                                          ? Color(0xff6366f1)
                                           : Colors.white,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -147,12 +142,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: selectedIndex == 1
-                                          ? const Color.fromARGB(
-                                              255,
-                                              97,
-                                              52,
-                                              234,
-                                            )
+                                          ? const Color(0xff6366f1)
                                           : Colors.white,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -199,7 +189,7 @@ class _RewardsPageState extends State<RewardsPage> {
                               'Promo Codes',
                               style: TextStyle(
                                 fontFamily: 'Poppins-Regular',
-                                color: Colors.blue,
+                                color: Color(0xff6366f1),
                               ),
                             ),
                           ],
@@ -213,7 +203,7 @@ class _RewardsPageState extends State<RewardsPage> {
                         width: 100,
                         height: 100,
                         decoration: BoxDecoration(
-                          color: Colors.blue.shade100,
+                          color: Color.fromARGB(255, 159, 160, 242),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
@@ -222,7 +212,7 @@ class _RewardsPageState extends State<RewardsPage> {
                           children: [
                             Icon(
                               FontAwesomeIcons.handsClapping,
-                              color: Colors.blue.shade700,
+                              color: Color(0xff6366f1),
                               size: 40,
                             ),
                             SizedBox(height: 20),
@@ -230,7 +220,7 @@ class _RewardsPageState extends State<RewardsPage> {
                               'Share & Earn',
                               style: TextStyle(
                                 fontFamily: 'Poppins-Regular',
-                                color: Colors.blue,
+                                color: Color(0xff6366f1),
                               ),
                             ),
                           ],
@@ -340,17 +330,17 @@ class _RewardsPageState extends State<RewardsPage> {
                             width: 100,
                             height: 100,
                             decoration: BoxDecoration(
-                              color: Colors.blueAccent.shade100,
+                              color: Color.fromARGB(255, 159, 160, 242),
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
                                 color:
-                                    Colors.blueAccent.shade700,
+                                    Color(0xff6366f1),
                                 width: 2,
                               ),
                             ),
                             child: Icon(
                               FontAwesomeIcons.puzzlePiece,
-                              color: Colors.blueAccent.shade700,
+                              color: Color(0xff6366f1),
                               size: 40,
                             ),
                           ),

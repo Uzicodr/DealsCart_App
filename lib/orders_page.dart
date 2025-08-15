@@ -48,14 +48,14 @@ class _OrdersPageState extends State<OrdersPage> {
               const Spacer(),
               const Icon(
                 FontAwesomeIcons.solidComment,
-                color: Color.fromARGB(255, 97, 52, 234),
+                color: Color(0xff6366f1),
               ),
             ],
           ),
           backgroundColor: Colors.white,
           bottom: const TabBar(
-            indicatorColor: Colors.blue,
-            labelColor: Colors.blue,
+            indicatorColor: Color(0xff6366f1),
+            labelColor: Color(0xff6366f1),
             unselectedLabelColor: Color.fromARGB(255, 98, 97, 97),
             tabs: [
               Tab(text: 'Grocery & More'),
@@ -85,7 +85,7 @@ class _OrdersPageState extends State<OrdersPage> {
                             });
                           },
                           style: TextButton.styleFrom(
-                            backgroundColor: isSelected ? Colors.blue : Colors.white,
+                            backgroundColor: isSelected ? Color(0xff6366f1) : Colors.white,
                             foregroundColor: isSelected ? Colors.white : Colors.black,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
@@ -132,7 +132,7 @@ class _OrdersPageState extends State<OrdersPage> {
                             });
                           },
                           style: TextButton.styleFrom(
-                            backgroundColor: isSelected ? Colors.blue : Colors.white,
+                            backgroundColor: isSelected ? Color(0xff6366f1) : Colors.white,
                             foregroundColor: isSelected ? Colors.white : Colors.black,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
